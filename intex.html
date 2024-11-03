@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Story Creator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Emoji Story Creator</h1>
+        <p class="paragraph">Story to your express</p>
+        <div class="emoji-palette" id="emojiPalette"></div>
+        <div class="story-area">
+            <div class="text-input">
+                <textarea id="storyText" placeholder="Write your story here..."></textarea>
+            </div>
+            <div class="emoji-story" id="emojiStory" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="controls">
+            <!---<button onclick="convertToEmoji()">Convert Text to Emoji</button>-->
+            <button  onclick="convertToEmoji()">
+                Convert Text to Emoji
+              <div class="star-1">
+                <svg
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 784.11 815.53"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  version="1.1"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                      class="fil0"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="star-2">
+                <svg
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 784.11 815.53"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  version="1.1"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                      class="fil0"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="star-3">
+                <svg
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 784.11 815.53"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  version="1.1"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                      class="fil0"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="star-4">
+                <svg
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 784.11 815.53"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  version="1.1"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                      class="fil0"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="star-5">
+                <svg
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 784.11 815.53"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  version="1.1"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                      class="fil0"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="star-6">
+                <svg
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 784.11 815.53"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  version="1.1"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                      class="fil0"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </button>
+              <!--<button onclick="convertToEmoji()">Convert Text to Emoji</button>-->
+               <!----<button onclick="clearStory()">Clear Story</button>
+            </div>
+            <div class="story-preview" id="storyPreview"></div>
+        </div>------>
+
+        <div class="relative inline-block w-full py-3 modgp">
+            <div class="relative">
+              <button
+                class="inline-flex items-center justify-center bg-primary text-sm text-white font-medium rounded-lg enabled:hover:bg-primary-dark enabled:hover:shadow-md enabled:active:bg-primary-dark enabled:focus:bg-primary-dark focus:outline-none px-4 py-2 w-full py-2.5 relative disabled:opacity-50 transition-all"
+                type="button" onclick="clearStory()"
+              >
+                <div class="w-full flex items-center justify-center">
+                  Clear Story
+                </div>
+              </button>
+            </div>
+            <div class="absolute inset-0 pointer-events-none">
+              <div
+                id="style-AQliM"
+                class="pointer-events-none absolute z-10 animate-magic-sparkle style-AQliM"
+              >
+                <svg
+                  style="filter: drop-shadow(rgb(250, 178, 96) 0px 0px 2px);"
+                  fill="none"
+                  viewBox="0 0 68 68"
+                  height="6"
+                  width="6"
+                  class="animate-spin-slow"
+                >
+                  <path
+                    fill="white"
+                    d="M26.5 25.5C19.0043 33.3697 0 34 0 34C0 34 19.1013 35.3684 26.5 43.5C33.234 50.901 34 68 34 68C34 68 36.9884 50.7065 44.5 43.5C51.6431 36.647 68 34 68 34C68 34 51.6947 32.0939 44.5 25.5C36.5605 18.2235 34 0 34 0C34 0 33.6591 17.9837 26.5 25.5Z"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                id="style-WCb99"
+                class="pointer-events-none absolute z-10 animate-magic-sparkle style-WCb99"
+              >
+                <svg
+                  style="filter: drop-shadow(rgb(250, 209, 96) 0px 0px 2px);"
+                  fill="none"
+                  viewBox="0 0 68 68"
+                  height="9"
+                  width="9"
+                  class="animate-spin-slow"
+                >
+                  <path
+                    fill="white"
+                    d="M26.5 25.5C19.0043 33.3697 0 34 0 34C0 34 19.1013 35.3684 26.5 43.5C33.234 50.901 34 68 34 68C34 68 36.9884 50.7065 44.5 43.5C51.6431 36.647 68 34 68 34C68 34 51.6947 32.0939 44.5 25.5C36.5605 18.2235 34 0 34 0C34 0 33.6591 17.9837 26.5 25.5Z"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                id="style-dBNZV"
+                class="pointer-events-none absolute z-10 animate-magic-sparkle style-dBNZV"
+              >
+                <svg
+                  style="filter: drop-shadow(rgb(250, 209, 96) 0px 0px 2px);"
+                  fill="none"
+                  viewBox="0 0 68 68"
+                  height="7"
+                  width="7"
+                  class="animate-spin-slow"
+                >
+                  <path
+                    fill="white"
+                    d="M26.5 25.5C19.0043 33.3697 0 34 0 34C0 34 19.1013 35.3684 26.5 43.5C33.234 50.901 34 68 34 68C34 68 36.9884 50.7065 44.5 43.5C51.6431 36.647 68 34 68 34C68 34 51.6947 32.0939 44.5 25.5C36.5605 18.2235 34 0 34 0C34 0 33.6591 17.9837 26.5 25.5Z"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                id="style-tiisO"
+                class="pointer-events-none absolute z-10 animate-magic-sparkle style-tiisO"
+              >
+                <svg
+                  style="filter: drop-shadow(rgb(250, 201, 96) 0px 0px 2px);"
+                  fill="none"
+                  viewBox="0 0 68 68"
+                  height="6"
+                  width="6"
+                  class="animate-spin-slow"
+                >
+                  <path
+                    fill="white"
+                    d="M26.5 25.5C19.0043 33.3697 0 34 0 34C0 34 19.1013 35.3684 26.5 43.5C33.234 50.901 34 68 34 68C34 68 36.9884 50.7065 44.5 43.5C51.6431 36.647 68 34 68 34C68 34 51.6947 32.0939 44.5 25.5C36.5605 18.2235 34 0 34 0C34 0 33.6591 17.9837 26.5 25.5Z"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                id="style-re9B7"
+                class="pointer-events-none absolute z-10 animate-magic-sparkle style-re9B7"
+              >
+                <svg
+                  style="filter: drop-shadow(rgb(250, 247, 96) 0px 0px 2px);"
+                  fill="none"
+                  viewBox="0 0 68 68"
+                  height="9"
+                  width="9"
+                  class="animate-spin-slow"
+                >
+                  <path
+                    fill="white"
+                    d="M26.5 25.5C19.0043 33.3697 0 34 0 34C0 34 19.1013 35.3684 26.5 43.5C33.234 50.901 34 68 34 68C34 68 36.9884 50.7065 44.5 43.5C51.6431 36.647 68 34 68 34C68 34 51.6947 32.0939 44.5 25.5C36.5605 18.2235 34 0 34 0C34 0 33.6591 17.9837 26.5 25.5Z"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                id="style-BKG4G"
+                class="pointer-events-none absolute z-10 animate-magic-sparkle style-BKG4G"
+              >
+                <svg
+                  style="filter: drop-shadow(rgb(250, 165, 96) 0px 0px 2px);"
+                  fill="none"
+                  viewBox="0 0 68 68"
+                  height="5"
+                  width="5"
+                  class="animate-spin-slow"
+                >
+                  <path
+                    fill="white"
+                    d="M26.5 25.5C19.0043 33.3697 0 34 0 34C0 34 19.1013 35.3684 26.5 43.5C33.234 50.901 34 68 34 68C34 68 36.9884 50.7065 44.5 43.5C51.6431 36.647 68 34 68 34C68 34 51.6947 32.0939 44.5 25.5C36.5605 18.2235 34 0 34 0C34 0 33.6591 17.9837 26.5 25.5Z"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                id="style-NaoVe"
+                class="pointer-events-none absolute z-10 animate-magic-sparkle style-NaoVe"
+              >
+                <svg
+                  style="filter: drop-shadow(rgb(250, 209, 96) 0px 0px 2px);"
+                  fill="none"
+                  viewBox="0 0 68 68"
+                  height="6"
+                  width="6"
+                  class="animate-spin-slow"
+                >
+                  <path
+                    fill="white"
+                    d="M26.5 25.5C19.0043 33.3697 0 34 0 34C0 34 19.1013 35.3684 26.5 43.5C33.234 50.901 34 68 34 68C34 68 36.9884 50.7065 44.5 43.5C51.6431 36.647 68 34 68 34C68 34 51.6947 32.0939 44.5 25.5C36.5605 18.2235 34 0 34 0C34 0 33.6591 17.9837 26.5 25.5Z"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                id="style-pwIlv"
+                class="pointer-events-none absolute z-10 animate-magic-sparkle style-pwIlv"
+              >
+                <svg
+                  style="filter: drop-shadow(rgb(250, 209, 96) 0px 0px 2px);"
+                  fill="none"
+                  viewBox="0 0 68 68"
+                  height="9"
+                  width="9"
+                  class="animate-spin-slow"
+                >
+                  <path
+                    fill="white"
+                    d="M26.5 25.5C19.0043 33.3697 0 34 0 34C0 34 19.1013 35.3684 26.5 43.5C33.234 50.901 34 68 34 68C34 68 36.9884 50.7065 44.5 43.5C51.6431 36.647 68 34 68 34C68 34 51.6947 32.0939 44.5 25.5C36.5605 18.2235 34 0 34 0C34 0 33.6591 17.9837 26.5 25.5Z"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                id="style-QmcAd"
+                class="pointer-events-none absolute z-10 animate-magic-sparkle style-QmcAd"
+              >
+                <svg
+                  style="filter: drop-shadow(rgb(250, 201, 96) 0px 0px 2px);"
+                  fill="none"
+                  viewBox="0 0 68 68"
+                  height="5"
+                  width="5"
+                  class="animate-spin-slow"
+                >
+                  <path
+                    fill="white"
+                    d="M26.5 25.5C19.0043 33.3697 0 34 0 34C0 34 19.1013 35.3684 26.5 43.5C33.234 50.901 34 68 34 68C34 68 36.9884 50.7065 44.5 43.5C51.6431 36.647 68 34 68 34C68 34 51.6947 32.0939 44.5 25.5C36.5605 18.2235 34 0 34 0C34 0 33.6591 17.9837 26.5 25.5Z"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                id="style-VG2eL"
+                class="pointer-events-none absolute z-10 animate-magic-sparkle style-VG2eL"
+              >
+                <svg
+                  style="filter: drop-shadow(rgb(250, 178, 96) 0px 0px 2px);"
+                  fill="none"
+                  viewBox="0 0 68 68"
+                  height="9"
+                  width="9"
+                  class="animate-spin-slow"
+                >
+                  <path
+                    fill="white"
+                    d="M26.5 25.5C19.0043 33.3697 0 34 0 34C0 34 19.1013 35.3684 26.5 43.5C33.234 50.901 34 68 34 68C34 68 36.9884 50.7065 44.5 43.5C51.6431 36.647 68 34 68 34C68 34 51.6947 32.0939 44.5 25.5C36.5605 18.2235 34 0 34 0C34 0 33.6591 17.9837 26.5 25.5Z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+
+          
+        </div>
+        <div class="story-preview" id="storyPreview"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
